@@ -7,18 +7,44 @@ body {
   padding: 40px;
 }
 
-.form {
-  max-width: 500px;
+form.form {
+  max-width: 800px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
+h1 {
+  font-size: 28px;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+
 .field {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  max-width: 300px;
 }
 
 label {
-  display: block;
   margin-bottom: 5px;
 }
 
@@ -26,7 +52,6 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 select {
-  width: 100%;
   padding: 10px;
   border: 2px solid white;
   background-color: black;
@@ -46,11 +71,6 @@ select:hover {
   border-color: red;
 }
 
-input.error,
-select.error {
-  border-color: red;
-}
-
 .field .error {
   color: red;
   font-size: 12px;
@@ -60,6 +80,11 @@ select.error {
 
 .checkbox {
   margin-bottom: 10px;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
 }
 
 .checkbox input {
@@ -74,8 +99,19 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  align-self: flex-start;
 }
 
 button:hover {
   background-color: red;
+}
+
+.grid-2{
+  display: grid;
+  grid-template-colums:1fr 1fr;
+  gap: 20px;
+}
+
+.section .field{
+  margin-bottom: 20px;
 }
